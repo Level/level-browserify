@@ -13,7 +13,7 @@ Level-browserify
 This is a convenience package that bundles the current release of **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
 
 Use this package to avoid having to explicitly install LevelDOWN/Level-js when you just want to use LevelUP in node and in the browser.
-In node.js you get LevelDOWN, while in the browser you gel Level.js
+In node.js you get LevelDOWN, while in the browser you gel Level.js (through use of browserify's `browser` field setting in `package.json`)
 
 ```js
 var level = require('level-browserify')
