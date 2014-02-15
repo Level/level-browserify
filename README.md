@@ -1,24 +1,25 @@
-Level
+Level-browserify
 =====
 
 ![LevelDB Logo](https://twimg0-a.akamaihd.net/profile_images/3360574989/92fc472928b444980408147e5e5db2fa_bigger.png)
 
-**Fast & simple storage - a Node.js-style LevelDB wrapper**
+**Fast & simple storage - a Node.js-style LevelDB wrapper that works in the browser too!**
 
-[![Build Status](https://secure.travis-ci.org/Level/level.png)](http://travis-ci.org/Level/level)
+[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
 
-[![NPM](https://nodei.co/npm/level.png?stars&downloads)](https://nodei.co/npm/level/) [![NPM](https://nodei.co/npm-dl/level.png)](https://nodei.co/npm/level/)
+[![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level.png)](https://nodei.co/npm/level/)
 
 
-This is a convenience package that bundles the current release of **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)** and exposes LevelUP on its export.
+This is a convenience package that bundles the current release of **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
 
-Use this package to avoid having to explicitly install LevelDOWN when you just want plain old LevelDB from LevelUP.
+Use this package to avoid having to explicitly install LevelDOWN/Level-js when you just want to use LevelUP in node and in the browser.
+In node.js you get LevelDOWN, while in the browser you gel Level.js
 
 ```js
-var level = require('level')
+var level = require('level-browserify')
 
 // 1) Create our database, supply location and options.
-//    This will create or open the underlying LevelDB store.
+//    This will create or open the underlying LevelDB store/Indexedb Database
 var db = level('./mydb')
 
 // 2) put a key & value
@@ -35,7 +36,7 @@ db.put('name', 'Level', function (err) {
 })
 ```
 
-See **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)** for more details.
+See **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** for more details.
 
 <a name="contributing"></a>
 Contributing
@@ -72,6 +73,6 @@ Level, including LevelUP & LevelDOWN, is only possible due to the excellent work
 Licence &amp; copyright
 -------------------
 
-Copyright (c) 2012-2013 Level contributors (listed above).
+Copyright (c) 2012-2014 Level contributors (listed above).
 
 Level is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
