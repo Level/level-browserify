@@ -38,9 +38,7 @@
     "level-packager": "~0.18.0",
     "level-js": "~1.1.2"
   },
-  "browser": {
-    "./level.js": "./browser.js"
-  },
+  "browser": "browser.js",
   "devDependencies": {
     "tape": "*"
   },
