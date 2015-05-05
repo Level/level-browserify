@@ -1,4 +1,4 @@
-# Level is an OPEN Open Source Project
+# Level-browserify is an OPEN Open Source Project
 
 -----------------------------------------
 

@@ -10,10 +10,10 @@ Level-browserify
 [![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level.png)](https://nodei.co/npm/level/)
 
 
-This is a convenience package that bundles the current release of **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
+This is a convenience package that bundles the current release of **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
 
-Use this package to avoid having to explicitly install LevelDOWN/Level-js when you just want to use LevelUP in node and in the browser.
-In node.js you get LevelDOWN, while in the browser you gel Level.js (through use of browserify's `browser` field setting in `package.json`)
+Use this package to avoid having to explicitly install LevelDOWN/Level.js when you just want to use LevelUP in node and in the browser.
+In node.js you get LevelDOWN, while in the browser you get Level.js (through use of browserify's `browser` field setting in `package.json`).
 
 ```js
 var level = require('level-browserify')
@@ -36,21 +36,21 @@ db.put('name', 'Level', function (err) {
 })
 ```
 
-See **[LevelUP](https://github.com/rvagg/node-levelup)** and **[LevelDOWN](https://github.com/rvagg/node-leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** for more details.
+See **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** for more details.
 
 <a name="contributing"></a>
 Contributing
 ------------
 
-Level is an **OPEN Open Source Project**. This means that:
+Level-browserify is an **OPEN Open Source Project**. This means that:
 
 > Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
 
-See the [CONTRIBUTING.md](https://github.com/Level/level/blob/master/CONTRIBUTING.md) file for more details.
+See the [CONTRIBUTING.md](https://github.com/Level/level-browserify/blob/master/CONTRIBUTING.md) file for more details.
 
 ### Contributors
 
-Level, including LevelUP & LevelDOWN, is only possible due to the excellent work of the following contributors:
+Level-browserify, including LevelUP & LevelDOWN, is only possible due to the excellent work of the following contributors:
 
 <table><tbody>
 <tr><th align="left">Rod Vagg</th><td><a href="https://github.com/rvagg">GitHub/rvagg</a></td><td><a href="http://twitter.com/rvagg">Twitter/@rvagg</a></td></tr>
@@ -73,6 +73,7 @@ Level, including LevelUP & LevelDOWN, is only possible due to the excellent work
 Licence &amp; copyright
 -------------------
 
-Copyright (c) 2012-2015 Level contributors (listed above).
+Copyright (c) 2012-2015 Level-browserify contributors (listed above).
 
-Level is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+Level-browserify is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+
