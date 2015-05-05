@@ -13,7 +13,7 @@ branches:
     - master
 
 script:
-  - n io 1.8.1
+  - n io latest
   - iojs -v; npm -v;
   - JOBS=max npm install
   - npm test && rm -rf node_modules/
