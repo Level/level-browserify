@@ -7,7 +7,7 @@ Level-browserify
 
 [![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
 
-[![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level.png)](https://nodei.co/npm/level/)
+[![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level-browserify.png)](https://nodei.co/npm/level-browserify/)
 
 
 This is a convenience package that bundles the current release of **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
