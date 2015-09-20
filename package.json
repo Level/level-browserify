@@ -36,7 +36,7 @@
   "dependencies": {
     "level-js": "~2.1.6",
     "level-packager": "~1.1.0",
-    "leveldown": "~1.2.2"
+    "leveldown": "^1.4.1"
   },
   "browser": "browser.js",
   "devDependencies": {
