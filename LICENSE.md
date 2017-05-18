@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Copyright (c) 2012-2015 Level-browserify contributors
+Copyright (c) 2012-2017 Level-browserify contributors
 ---------------------------------------
 
 *Level-browserify contributors listed at <https://github.com/level/level-browserify#contributors>*
