@@ -5,8 +5,7 @@ Level-browserify
 
 **Fast & simple storage - a Node.js-style LevelDB wrapper that works in the browser too!**
 
-[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
-[![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
+[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify) [![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify) [![Greenkeeper badge](https://badges.greenkeeper.io/Level/level-browserify.svg)](https://greenkeeper.io/)
 
 [![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level-browserify.png)](https://nodei.co/npm/level-browserify/)
 
