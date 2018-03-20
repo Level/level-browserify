@@ -1,6 +1,2 @@
 
-var Leveljs = require('level-js')
-
-module.exports = require('level-packager')(function(l) {
-  return new Leveljs(l)
-})
+module.exports = require('level-packager')(require('level-js'))
