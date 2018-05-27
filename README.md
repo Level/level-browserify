@@ -2,10 +2,11 @@
 
 > Fast & simple storage. A Node.js-style `LevelDB` wrapper that works in the browser too!
 
-[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify) [![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify) [![Greenkeeper badge](https://badges.greenkeeper.io/Level/level-browserify.svg)](https://greenkeeper.io/)
-
-[![NPM](https://nodei.co/npm/level-browserify.png?stars&downloads)](https://nodei.co/npm/level-browserify/) [![NPM](https://nodei.co/npm-dl/level-browserify.png)](https://nodei.co/npm/level-browserify/)
-
+[![level badge][level-badge]](https://github.com/level/awesome)
+[![npm](https://img.shields.io/npm/v/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
+[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
+[![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
+[![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 
 This is a convenience package that bundles the current release of **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
 
@@ -70,3 +71,4 @@ Copyright (c) 2012-2017 Level-browserify contributors (listed above).
 
 Level-browserify is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
+[level-badge]: http://leveldb.org/img/badge.svg
