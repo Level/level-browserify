@@ -68,9 +68,9 @@ Level-browserify, including LevelUP & LevelDOWN, is only possible due to the exc
 
 ## Licence
 
-Copyright (c) 2012-2017 Level-browserify contributors (listed above).
+Copyright (c) 2012-2018 `level-browserify` contributors (listed above).
 
-Level-browserify is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+`level-browserify` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
 [level-badge]: http://leveldb.org/img/badge.svg
 [levelup]: https://github.com/level/levelup
