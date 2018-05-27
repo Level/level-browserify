@@ -40,12 +40,13 @@
   },
   "browser": "browser.js",
   "devDependencies": {
+    "airtap": "0.0.7",
     "standard": "^11.0.1",
     "tape": "^4.9.0"
   },
   "scripts": {
     "test": "standard && node test-node.js",
-    "test-browser": "standard && node test-browser.js"
+    "test-browser-local": "standard && airtap --local --no-coverage test-browser.js"
   },
   "license": "MIT"
 }
