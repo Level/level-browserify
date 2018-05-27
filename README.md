@@ -21,6 +21,7 @@ In node.js you get `leveldown`, while in the browser you get `level-js` (through
 
 * [Usage](#usage)
 * [API](#api)
+* [Promise Support](#promise-support)
 * [Contributing](#contributing)
 * [Contributors](#contributors)
 * [License](#license)
@@ -338,6 +339,42 @@ db.createReadStream({ keys: false, values: true })
   .on('data', function (data) {
     console.log('value=', data)
   })
+```
+
+## Promise Support
+
+`level-browserify` ships with native `Promise` support out of the box.
+
+Each function taking a callback also can be used as a promise, if the callback is omitted. This applies for:
+
+- `db.get(key[, options])`
+- `db.put(key, value[, options])`
+- `db.del(key[, options])`
+- `db.batch(ops[, options])`
+- `db.batch().write()`
+
+The only exception is the `level-browserify` constructor itself, which if no callback is passed will lazily open the underlying store in the background.
+
+Example:
+
+```js
+var db = level('./my-db')
+
+db.put('foo', 'bar')
+  .then(function () { return db.get('foo') })
+  .then(function (value) { console.log(value) })
+  .catch(function (err) { console.error(err) })
+```
+
+Or using `async/await`:
+
+```js
+var main = async () => {
+  const db = level('./my-db')
+
+  await db.put('foo', 'bar')
+  console.log(await db.get('foo'))
+}
 ```
 
 ## Contributing
