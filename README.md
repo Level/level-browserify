@@ -8,10 +8,13 @@
 [![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
 [![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 
-This is a convenience package that bundles the current release of **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** and exposes LevelUP on its export.
+* exports a function that returns a [`levelup instance`](https://github.com/level/levelup#ctor) when invoked
+* bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
+* leverages encodings using [`encoding-down`][encoding-down]
 
-Use this package to avoid having to explicitly install LevelDOWN/Level.js when you just want to use LevelUP in node and in the browser.
-In node.js you get LevelDOWN, while in the browser you get Level.js (through use of browserify's `browser` field setting in `package.json`).
+Use this package to avoid having to explicitly install `leveldown`/`level-js` when you just want to use `levelup` in node and in the browser.
+
+In node.js you get `leveldown`, while in the browser you get `level-js` (through use of browserify's `browser` field setting in `package.json`).
 
 ```js
 var level = require('level-browserify')
@@ -33,8 +36,6 @@ db.put('name', 'Level', function (err) {
   })
 })
 ```
-
-See **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** for more details.
 
 ## Contributing
 
@@ -72,3 +73,6 @@ Copyright (c) 2012-2017 Level-browserify contributors (listed above).
 Level-browserify is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
 [level-badge]: http://leveldb.org/img/badge.svg
+[levelup]: https://github.com/level/levelup
+[leveldown]: https://github.com/level/leveldown
+[level-js]: https://github.com/level/level-js
