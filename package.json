@@ -40,7 +40,7 @@
   },
   "browser": "browser.js",
   "devDependencies": {
-    "tape": "*"
+    "tape": "^4.9.0"
   },
   "scripts": {
     "test": "node ./test.js"
