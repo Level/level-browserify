@@ -9,6 +9,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 
+A convenience package that:
+
 * exports a function that returns a [`levelup instance`](https://github.com/level/levelup#ctor) when invoked
 * bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
 * leverages encodings using [`encoding-down`][encoding-down]
@@ -16,6 +18,18 @@
 Use this package to avoid having to explicitly install `leveldown`/`level-js` when you just want to use `levelup` in node and in the browser.
 
 In node.js you get `leveldown`, while in the browser you get `level-js` (through use of browserify's `browser` field setting in `package.json`).
+
+## Table of Contents
+
+* [Usage](#usage)
+* [API](#api)
+* [Promise Support](#promise-support)
+* [Events](#events)
+* [Contributing](#contributing)
+* [Contributors](#contributors)
+* [License](#license)
+
+## Usage
 
 ```js
 var level = require('level-browserify')
@@ -330,6 +344,65 @@ db.createReadStream({ keys: false, values: true })
   })
 ```
 
+## Promise Support
+
+`level-browserify` ships with native `Promise` support out of the box.
+
+Each function taking a callback also can be used as a promise, if the callback is omitted. This applies for:
+
+- `db.get(key[, options])`
+- `db.put(key, value[, options])`
+- `db.del(key[, options])`
+- `db.batch(ops[, options])`
+- `db.batch().write()`
+
+The only exception is the `level-browserify` constructor itself, which if no callback is passed will lazily open the underlying store in the background.
+
+Example:
+
+```js
+var db = level('./my-db')
+
+db.put('foo', 'bar')
+  .then(function () { return db.get('foo') })
+  .then(function (value) { console.log(value) })
+  .catch(function (err) { console.error(err) })
+```
+
+Or using `async/await`:
+
+```js
+var main = async () => {
+  const db = level('./my-db')
+
+  await db.put('foo', 'bar')
+  console.log(await db.get('foo'))
+}
+```
+
+## Events
+
+`levelup` is an [`EventEmitter`](https://nodejs.org/api/events.html) and emits the following events.
+
+| Event     | Description                 | Arguments            |
+|:----------|:----------------------------|:---------------------|
+| `put`     | Key has been updated        | `key, value` (any)   |
+| `del`     | Key has been deleted        | `key` (any)          |
+| `batch`   | Batch has executed          | `operations` (array) |
+| `opening` | Underlying store is opening | -                    |
+| `open`    | Store has opened            | -                    |
+| `ready`   | Alias of `open`             | -                    |
+| `closing` | Store is closing            | -                    |
+| `closed`  | Store has closed.           | -                    |
+
+For example you can do:
+
+```js
+db.on('put', function (key, value) {
+  console.log('inserted', { key, value })
+})
+```
+
 ## Contributing
 
 `level-browserify` is an **OPEN Open Source Project**. This means that:
@@ -338,7 +411,7 @@ db.createReadStream({ keys: false, values: true })
 
 See the [CONTRIBUTING.md](https://github.com/Level/level-browserify/blob/master/CONTRIBUTING.md) file for more details.
 
-### Contributors
+## Contributors
 
 `level-browserify`, including `levelup`, `leveldown` and `level-js`, is only possible due to the excellent work of the following contributors:
 
