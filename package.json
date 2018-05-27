@@ -44,7 +44,8 @@
     "tape": "^4.9.0"
   },
   "scripts": {
-    "test": "standard && node test.js"
+    "test": "standard && node test-node.js",
+    "test-browser": "standard && node test-browser.js"
   },
   "license": "MIT"
 }
