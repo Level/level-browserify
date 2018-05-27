@@ -9,6 +9,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 
+A convenience package that:
+
 * exports a function that returns a [`levelup instance`](https://github.com/level/levelup#ctor) when invoked
 * bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
 * leverages encodings using [`encoding-down`][encoding-down]
