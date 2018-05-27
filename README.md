@@ -345,7 +345,7 @@ db.createReadStream({ keys: false, values: true })
 
 See the [CONTRIBUTING.md](https://github.com/Level/level-browserify/blob/master/CONTRIBUTING.md) file for more details.
 
-### Contributors
+## Contributors
 
 `level-browserify`, including `levelup`, `leveldown` and `level-js`, is only possible due to the excellent work of the following contributors:
 
