@@ -40,10 +40,11 @@
   },
   "browser": "browser.js",
   "devDependencies": {
+    "standard": "^11.0.1",
     "tape": "^4.9.0"
   },
   "scripts": {
-    "test": "node ./test.js"
+    "test": "standard && node test.js"
   },
   "license": "MIT"
 }
