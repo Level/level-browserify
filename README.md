@@ -1,5 +1,4 @@
-Level-browserify
-=====
+# level-browserify
 
 <img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
 
@@ -38,9 +37,7 @@ db.put('name', 'Level', function (err) {
 
 See **[LevelUP](https://github.com/level/levelup)** and **[LevelDOWN](https://github.com/level/leveldown)**/**[Level.js](https://github.com/maxogden/level.js)** for more details.
 
-<a name="contributing"></a>
-Contributing
-------------
+## Contributing
 
 Level-browserify is an **OPEN Open Source Project**. This means that:
 
@@ -69,9 +66,7 @@ Level-browserify, including LevelUP & LevelDOWN, is only possible due to the exc
 </tbody></table>
 
 
-<a name="licence"></a>
-Licence &amp; copyright
--------------------
+## Licence
 
 Copyright (c) 2012-2017 Level-browserify contributors (listed above).
 
