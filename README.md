@@ -359,11 +359,11 @@ See the [CONTRIBUTING.md](https://github.com/Level/level-browserify/blob/master/
 </tbody></table>
 
 
-## Licence
+## License
 
 Copyright (c) 2012-2018 `level-browserify` contributors (listed above).
 
-`level-browserify` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+`level-browserify` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included `LICENSE.md` file for more details.
 
 [level-badge]: http://leveldb.org/img/badge.svg
 [levelup]: https://github.com/level/levelup
