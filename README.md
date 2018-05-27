@@ -22,6 +22,7 @@ In node.js you get `leveldown`, while in the browser you get `level-js` (through
 * [Usage](#usage)
 * [API](#api)
 * [Promise Support](#promise-support)
+* [Events](#events)
 * [Contributing](#contributing)
 * [Contributors](#contributors)
 * [License](#license)
@@ -375,6 +376,29 @@ var main = async () => {
   await db.put('foo', 'bar')
   console.log(await db.get('foo'))
 }
+```
+
+## Events
+
+`levelup` is an [`EventEmitter`](https://nodejs.org/api/events.html) and emits the following events.
+
+| Event     | Description                 | Arguments            |
+|:----------|:----------------------------|:---------------------|
+| `put`     | Key has been updated        | `key, value` (any)   |
+| `del`     | Key has been deleted        | `key` (any)          |
+| `batch`   | Batch has executed          | `operations` (array) |
+| `opening` | Underlying store is opening | -                    |
+| `open`    | Store has opened            | -                    |
+| `ready`   | Alias of `open`             | -                    |
+| `closing` | Store is closing            | -                    |
+| `closed`  | Store has closed.           | -                    |
+
+For example you can do:
+
+```js
+db.on('put', function (key, value) {
+  console.log('inserted', { key, value })
+})
 ```
 
 ## Contributing
