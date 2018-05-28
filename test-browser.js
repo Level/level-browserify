@@ -4,13 +4,11 @@ var test = require('tape')
 var leveljs = require('level-js')
 var testCommon = require('level-js/test/util/test-common')
 var levelup = require('levelup')
+var level = require('./')
 var encoding = require('encoding-down')
 
-require('level-packager/abstract/test')(test, require('./'), {
-  skipRepairTest: true,
-  skipErrorIfExistsTest: true,
-  skipDestroyTest: true
-})
+require('level-packager/abstract/base-test')(test, level)
+require('level-packager/abstract/db-values-test')(test, level)
 
 test('setup', testCommon.setUp)
 
