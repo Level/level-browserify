@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## [2.0.0-rc1] - 2018-05-29
+
+### Changed
+* Upgrade `leveldown` from `^3.0.0` to `^4.0.0` (@greenkeeper)
+* Upgrade `level-packager` from `~1.2.0` to `~3.1.0` (@ralphtheninja)
+* Upgrade `level-js` from `~2.1.6` to `3.0.0-rc1` (@ralphtheninja)
+* Use proper version range for `tape` (@ralphtheninja)
+* Homogenize README headers, add table of contents and document the api (@ralphtheninja)
+* Separate tests into node and browser specific versions (@ralphtheninja)
+* Move `levelup` integration tests from `level-js` (@ralphtheninja)
+* Be explicit when running tests from `level-packager` (@ralphtheninja)
+
+### Added
+* Add node 9 and 10 to Travis (@ralphtheninja)
+* Add `airtap` for local browser testing (@ralphtheninja)
+* Add `standard` for linting (@ralphtheninja)
+
+### Removed
+* Remove node 0.12, 4, 5 and 7 from Travis (@ralphtheninja)
+
 ## [1.1.2] - 2018-03-20
 
 ### Changed
@@ -87,7 +107,8 @@
 
 :seedling: Initial release.
 
-[Unreleased]: https://github.com/level/level-browserify/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/level/level-browserify/compare/v2.0.0-rc1...HEAD
+[2.0.0-rc1]: https://github.com/level/level-browserify/compare/v1.1.2...v2.0.0-rc1
 [1.1.2]: https://github.com/level/level-browserify/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/level/level-browserify/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/level/level-browserify/compare/v1.0.2...v1.1.0
