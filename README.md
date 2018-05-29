@@ -442,4 +442,5 @@ Copyright (c) 2012-2018 `level-browserify` contributors (listed above).
 [level-badge]: http://leveldb.org/img/badge.svg
 [levelup]: https://github.com/level/levelup
 [leveldown]: https://github.com/level/leveldown
+[encoding-down]: https://github.com/level/encoding-down
 [level-js]: https://github.com/level/level-js
