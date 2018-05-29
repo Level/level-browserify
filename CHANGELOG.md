@@ -11,7 +11,7 @@
 * Use proper version range for `tape` (@ralphtheninja)
 * Homogenize README headers, add table of contents and document the api (@ralphtheninja)
 * Separate tests into node and browser specific versions (@ralphtheninja)
-* Move `levelup` integration tests from `level-js` (@ralphtheninja)
+* Import `levelup` integration tests from `level-js` (@ralphtheninja)
 * Be explicit when running tests from `level-packager` (@ralphtheninja)
 
 ### Added
