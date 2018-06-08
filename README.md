@@ -19,6 +19,8 @@ Use this package to avoid having to explicitly install `leveldown`/`level-js` wh
 
 In node.js you get `leveldown`, while in the browser you get `level-js` (through use of browserify's `browser` field setting in `package.json`).
 
+**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md).
+
 ## Table of Contents
 
 * [Usage](#usage)
