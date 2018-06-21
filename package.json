@@ -1,7 +1,7 @@
 {
   "name": "level-browserify",
   "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
-  "version": "2.0.0-rc1",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Level/level-browserify.git"
