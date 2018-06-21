@@ -41,12 +41,44 @@
   "browser": "browser.js",
   "devDependencies": {
     "airtap": "0.0.7",
+    "level-community": "^3.0.0",
+    "remark-cli": "^5.0.0",
+    "remark-collapse": "^0.1.2",
+    "remark-git-contributors": "^0.2.1",
+    "remark-github": "^7.0.3",
+    "remark-toc": "^5.0.0",
     "standard": "^11.0.1",
     "tape": "^4.9.0"
   },
+  "remarkConfig": {
+    "plugins": [
+      [
+        "remark-git-contributors",
+        "level-community"
+      ],
+      [
+        "remark-github"
+      ],
+      [
+        "remark-toc",
+        {
+          "maxDepth": 2,
+          "tight": true
+        }
+      ],
+      [
+        "remark-collapse",
+        {
+          "test": "Table of Contents",
+          "summary": "Click to expand"
+        }
+      ]
+    ]
+  },
   "scripts": {
     "test": "standard && node test-node.js",
-    "test-browser-local": "standard && airtap --local --no-coverage test-browser.js"
+    "test-browser-local": "standard && airtap --local --no-coverage test-browser.js",
+    "remark": "remark README.md CONTRIBUTORS.md CHANGELOG.md UPGRADING.md -o"
   },
   "license": "MIT"
 }
