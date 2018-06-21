@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2018-06-21
+
+### Changed
+* Upgrade `level-js` from `3.0.0-rc1` to `^3.0.0` (@ralphtheninja)
+* Fix missing link to `encoding-down` (@ralphtheninja)
+* Skip installing `g++-4.8` on Travis (@ralphtheninja)
+* Remove copyright year for less maintenance (@ralphtheninja)
+
+### Added
+* Add `UPGRADING.md` (@ralphtheninja)
+* Add `remark` tooling (@ralphtheninja)
+
 ## [2.0.0-rc1] - 2018-05-29
 
 ### Changed
@@ -107,7 +119,8 @@
 
 :seedling: Initial release.
 
-[Unreleased]: https://github.com/level/level-browserify/compare/v2.0.0-rc1...HEAD
+[Unreleased]: https://github.com/level/level-browserify/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/level/level-browserify/compare/v2.0.0-rc1...v2.0.0
 [2.0.0-rc1]: https://github.com/level/level-browserify/compare/v1.1.2...v2.0.0-rc1
 [1.1.2]: https://github.com/level/level-browserify/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/level/level-browserify/compare/v1.1.0...v1.1.1
