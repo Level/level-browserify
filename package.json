@@ -2,21 +2,6 @@
   "name": "level-browserify",
   "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
   "version": "2.0.0-rc1",
-  "contributors": [
-    "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
-    "John Chesley <john@chesl.es> (https://github.com/chesles/)",
-    "Jake Verbaten <raynos2@gmail.com> (https://github.com/raynos)",
-    "Dominic Tarr <dominic.tarr@gmail.com> (https://github.com/dominictarr)",
-    "Max Ogden <max@maxogden.com> (https://github.com/maxogden)",
-    "Lars-Magnus Skog <ralphtheninja@riseup.net> (https://github.com/ralphtheninja)",
-    "David Björklund <david.bjorklund@gmail.com> (https://github.com/kesla)",
-    "Julian Gruber <julian@juliangruber.com> (https://github.com/juliangruber)",
-    "Paolo Fragomeni <paolo@async.ly> (https://github.com/hij1nx)",
-    "Anton Whalley <anton.whalley@nearform.com> (https://github.com/No9)",
-    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
-    "Pedro Teixeira <pedro.teixeira@gmail.com> (https://github.com/pgte)",
-    "James Halliday <mail@substack.net> (https://github.com/substack)"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Level/level-browserify.git"
@@ -34,19 +19,51 @@
   ],
   "main": "level.js",
   "dependencies": {
-    "level-js": "3.0.0",
-    "level-packager": "~4.0.0",
+    "level-js": "^3.0.0",
+    "level-packager": "^4.0.0",
     "leveldown": "^4.0.0"
   },
   "browser": "browser.js",
   "devDependencies": {
     "airtap": "0.0.7",
+    "level-community": "^3.0.0",
+    "remark-cli": "^5.0.0",
+    "remark-collapse": "^0.1.2",
+    "remark-git-contributors": "^0.2.1",
+    "remark-github": "^7.0.3",
+    "remark-toc": "^5.0.0",
     "standard": "^11.0.1",
     "tape": "^4.9.0"
   },
+  "remarkConfig": {
+    "plugins": [
+      [
+        "remark-git-contributors",
+        "level-community"
+      ],
+      [
+        "remark-github"
+      ],
+      [
+        "remark-toc",
+        {
+          "maxDepth": 2,
+          "tight": true
+        }
+      ],
+      [
+        "remark-collapse",
+        {
+          "test": "Table of Contents",
+          "summary": "Click to expand"
+        }
+      ]
+    ]
+  },
   "scripts": {
     "test": "standard && node test-node.js",
-    "test-browser-local": "standard && airtap --local --no-coverage test-browser.js"
+    "test-browser-local": "standard && airtap --local --no-coverage test-browser.js",
+    "remark": "remark README.md CONTRIBUTORS.md CHANGELOG.md UPGRADING.md -o"
   },
   "license": "MIT"
 }
