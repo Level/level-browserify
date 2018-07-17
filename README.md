@@ -6,6 +6,7 @@
 [![npm](https://img.shields.io/npm/v/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 [![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
 [![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
+[![Coverage Status](https://coveralls.io/repos/github/Level/level-browserify/badge.svg)](https://coveralls.io/github/Level/level-browserify)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
 
