@@ -25,7 +25,7 @@
   },
   "browser": "browser.js",
   "devDependencies": {
-    "airtap": "0.1.0",
+    "airtap": "^2.0.0",
     "coveralls": "^3.0.2",
     "level-community": "^3.0.0",
     "nyc": "^12.0.2",
