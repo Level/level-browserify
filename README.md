@@ -441,7 +441,7 @@ See the [contribution guide](https://github.com/Level/level-browserify/blob/mast
 
 ## License
 
-[MIT](./LICENSE.md) © 2012-present `level-browserify` [Contributors](./CONTRIBUTORS.md).
+[MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
 
