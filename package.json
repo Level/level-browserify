@@ -60,6 +60,7 @@
   },
   "homepage": "https://github.com/Level/level-browserify",
   "keywords": [
+    "level",
     "leveldb",
     "stream",
     "database",
