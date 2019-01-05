@@ -1,29 +1,21 @@
 {
   "name": "level-browserify",
-  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
   "version": "2.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Level/level-browserify.git"
-  },
-  "homepage": "https://github.com/Level/level-browserify",
-  "keywords": [
-    "leveldb",
-    "stream",
-    "database",
-    "db",
-    "store",
-    "storage",
-    "json",
-    "indexeddb"
-  ],
+  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
+  "license": "MIT",
   "main": "level.js",
+  "scripts": {
+    "test": "standard && nyc node test-node.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test-browser-local": "standard && airtap --local test-browser.js",
+    "remark": "remark README.md CONTRIBUTORS.md CHANGELOG.md UPGRADING.md -o"
+  },
+  "browser": "browser.js",
   "dependencies": {
     "level-js": "^3.0.0",
     "level-packager": "^4.0.0",
     "leveldown": "^4.0.0"
   },
-  "browser": "browser.js",
   "devDependencies": {
     "airtap": "^2.0.0",
     "coveralls": "^3.0.2",
@@ -62,11 +54,19 @@
       ]
     ]
   },
-  "scripts": {
-    "test": "standard && nyc node test-node.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "test-browser-local": "standard && airtap --local test-browser.js",
-    "remark": "remark README.md CONTRIBUTORS.md CHANGELOG.md UPGRADING.md -o"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Level/level-browserify.git"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/Level/level-browserify",
+  "keywords": [
+    "leveldb",
+    "stream",
+    "database",
+    "db",
+    "store",
+    "storage",
+    "json",
+    "indexeddb"
+  ]
 }
