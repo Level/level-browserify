@@ -5,9 +5,10 @@
   "license": "MIT",
   "main": "level.js",
   "scripts": {
-    "test": "standard && nyc node test-node.js",
+    "test": "standard && hallmark && nyc node test-node.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "test-browser-local": "standard && airtap --local test-browser.js"
+    "test-browser-local": "standard && airtap --local test-browser.js",
+    "hallmark": "hallmark --fix"
   },
   "browser": "browser.js",
   "dependencies": {
