@@ -433,15 +433,15 @@ db.on('put', function (key, value) {
 
 ## Contributing
 
-`level-browserify` is an **OPEN Open Source Project**. This means that:
+[`Level/level-browserify`](https://github.com/Level/level-browserify) is an **OPEN Open Source Project**. This means that:
 
 > Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
 
-See the [contribution guide](https://github.com/Level/level-browserify/blob/master/CONTRIBUTING.md) file for more details.
+See the [Contribution Guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 
-[MIT](./LICENSE.md) © 2012-present `level-browserify` [Contributors](./CONTRIBUTORS.md).
+[MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
 

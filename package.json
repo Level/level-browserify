@@ -1,13 +1,43 @@
 {
   "name": "level-browserify",
-  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
   "version": "2.0.0",
+  "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN or Level.js)",
+  "license": "MIT",
+  "main": "level.js",
+  "scripts": {
+    "test": "standard && hallmark && nyc node test-node.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test-browser-local": "standard && airtap --local test-browser.js",
+    "hallmark": "hallmark --fix"
+  },
+  "browser": "browser.js",
+  "dependencies": {
+    "level-js": "^3.0.0",
+    "level-packager": "^4.0.0",
+    "leveldown": "^4.0.0"
+  },
+  "devDependencies": {
+    "airtap": "^2.0.0",
+    "coveralls": "^3.0.2",
+    "hallmark": "^0.1.0",
+    "level-community": "^3.0.0",
+    "nyc": "^12.0.2",
+    "standard": "^12.0.0",
+    "tape": "^4.9.0"
+  },
+  "hallmark": {
+    "community": "level-community",
+    "ignore": [
+      "README.md"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Level/level-browserify.git"
   },
   "homepage": "https://github.com/Level/level-browserify",
   "keywords": [
+    "level",
     "leveldb",
     "stream",
     "database",
@@ -16,57 +46,5 @@
     "storage",
     "json",
     "indexeddb"
-  ],
-  "main": "level.js",
-  "dependencies": {
-    "level-js": "^3.0.0",
-    "level-packager": "^4.0.0",
-    "leveldown": "^4.0.0"
-  },
-  "browser": "browser.js",
-  "devDependencies": {
-    "airtap": "^2.0.0",
-    "coveralls": "^3.0.2",
-    "level-community": "^3.0.0",
-    "nyc": "^12.0.2",
-    "remark-cli": "^5.0.0",
-    "remark-collapse": "^0.1.2",
-    "remark-git-contributors": "^0.2.1",
-    "remark-github": "^7.0.3",
-    "remark-toc": "^5.0.0",
-    "standard": "^12.0.0",
-    "tape": "^4.9.0"
-  },
-  "remarkConfig": {
-    "plugins": [
-      [
-        "remark-git-contributors",
-        "level-community"
-      ],
-      [
-        "remark-github"
-      ],
-      [
-        "remark-toc",
-        {
-          "maxDepth": 2,
-          "tight": true
-        }
-      ],
-      [
-        "remark-collapse",
-        {
-          "test": "Table of Contents",
-          "summary": "Click to expand"
-        }
-      ]
-    ]
-  },
-  "scripts": {
-    "test": "standard && nyc node test-node.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "test-browser-local": "standard && airtap --local test-browser.js",
-    "remark": "remark README.md CONTRIBUTORS.md CHANGELOG.md UPGRADING.md -o"
-  },
-  "license": "MIT"
+  ]
 }
