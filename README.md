@@ -2,10 +2,9 @@
 
 > Fast & simple storage. A Node.js-style `LevelDB` wrapper that works in the browser too!
 
-[![level badge][level-badge]](https://github.com/level/awesome)
+[![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-browserify.svg?label=&logo=npm)](https://www.npmjs.com/package/level-browserify)
-[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
-[![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
+[![Travis](https://img.shields.io/travis/Level/level-browserify.svg?logo=travis&label=)](https://travis-ci.org/Level/level-browserify)
 [![Coverage Status](https://coveralls.io/repos/github/Level/level-browserify/badge.svg)](https://coveralls.io/github/Level/level-browserify)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/dm/level-browserify.svg?label=dl)](https://www.npmjs.com/package/level-browserify)
@@ -14,7 +13,7 @@
 
 A convenience package that:
 
--   exports a function that returns a [`levelup instance`](https://github.com/level/levelup#ctor) when invoked
+-   exports a function that returns a [`levelup instance`](https://github.com/Level/levelup#ctor) when invoked
 -   bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
 -   leverages encodings using [`encoding-down`][encoding-down]
 
@@ -459,10 +458,10 @@ To sustain [`Level`](https://github.com/Level) and its activities, become a back
 
 [level-badge]: http://leveldb.org/img/badge.svg
 
-[levelup]: https://github.com/level/levelup
+[levelup]: https://github.com/Level/levelup
 
-[leveldown]: https://github.com/level/leveldown
+[leveldown]: https://github.com/Level/leveldown
 
-[encoding-down]: https://github.com/level/encoding-down
+[encoding-down]: https://github.com/Level/encoding-down
 
-[level-js]: https://github.com/level/level-js
+[level-js]: https://github.com/Level/level-js
