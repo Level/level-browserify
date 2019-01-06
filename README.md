@@ -13,9 +13,9 @@
 
 A convenience package that:
 
--   exports a function that returns a [`levelup instance`](https://github.com/Level/levelup#ctor) when invoked
--   bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
--   leverages encodings using [`encoding-down`][encoding-down]
+- exports a function that returns a [`levelup instance`](https://github.com/Level/levelup#ctor) when invoked
+- bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
+- leverages encodings using [`encoding-down`][encoding-down]
 
 Use this package to avoid having to explicitly install `leveldown`/`level-js` when you just want to use `levelup` in node and in the browser.
 
@@ -27,12 +27,13 @@ In node.js you get `leveldown`, while in the browser you get `level-js` (through
 
 <details><summary>Click to expand</summary>
 
--   [Usage](#usage)
--   [API](#api)
--   [Promise Support](#promise-support)
--   [Events](#events)
--   [Contributing](#contributing)
--   [License](#license)
+- [Usage](#usage)
+- [API](#api)
+- [Promise Support](#promise-support)
+- [Events](#events)
+- [Contributing](#contributing)
+- [Donate](#donate)
+- [License](#license)
 
 </details>
 
@@ -61,19 +62,19 @@ db.put('name', 'Level', function (err) {
 
 ## API
 
--   <a href="#ctor"><code><b>level()</b></code></a>
--   <a href="#open"><code>db.<b>open()</b></code></a>
--   <a href="#close"><code>db.<b>close()</b></code></a>
--   <a href="#put"><code>db.<b>put()</b></code></a>
--   <a href="#get"><code>db.<b>get()</b></code></a>
--   <a href="#del"><code>db.<b>del()</b></code></a>
--   <a href="#batch"><code>db.<b>batch()</b></code></a> _(array form)_
--   <a href="#batch_chained"><code>db.<b>batch()</b></code></a> _(chained form)_
--   <a href="#isOpen"><code>db.<b>isOpen()</b></code></a>
--   <a href="#isClosed"><code>db.<b>isClosed()</b></code></a>
--   <a href="#createReadStream"><code>db.<b>createReadStream()</b></code></a>
--   <a href="#createKeyStream"><code>db.<b>createKeyStream()</b></code></a>
--   <a href="#createValueStream"><code>db.<b>createValueStream()</b></code></a>
+- <a href="#ctor"><code><b>level()</b></code></a>
+- <a href="#open"><code>db.<b>open()</b></code></a>
+- <a href="#close"><code>db.<b>close()</b></code></a>
+- <a href="#put"><code>db.<b>put()</b></code></a>
+- <a href="#get"><code>db.<b>get()</b></code></a>
+- <a href="#del"><code>db.<b>del()</b></code></a>
+- <a href="#batch"><code>db.<b>batch()</b></code></a> _(array form)_
+- <a href="#batch_chained"><code>db.<b>batch()</b></code></a> _(chained form)_
+- <a href="#isOpen"><code>db.<b>isOpen()</b></code></a>
+- <a href="#isClosed"><code>db.<b>isClosed()</b></code></a>
+- <a href="#createReadStream"><code>db.<b>createReadStream()</b></code></a>
+- <a href="#createKeyStream"><code>db.<b>createKeyStream()</b></code></a>
+- <a href="#createValueStream"><code>db.<b>createValueStream()</b></code></a>
 
 See [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js] for more details.
 
@@ -83,9 +84,9 @@ See [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js] for
 
 The main entry point for creating a new `levelup` instance.
 
--   `location` path to the underlying `LevelDB`.
--   `options` is passed on to the underlying store.
--   `options.keyEncoding` and `options.valueEncoding` are passed to [`encoding-down`][encoding-down], default encoding is `'utf8'`
+- `location` path to the underlying `LevelDB`.
+- `options` is passed on to the underlying store.
+- `options.keyEncoding` and `options.valueEncoding` are passed to [`encoding-down`][encoding-down], default encoding is `'utf8'`
 
 Calling `level('./db')` will also open the underlying store. This is an asynchronous operation which will trigger your callback if you provide one. The callback should take the form `function (err, db) {}` where `db` is the `levelup` instance. If you don't provide a callback, any read & write operations are simply queued internally until the store is fully opened.
 
@@ -273,11 +274,11 @@ If no callback is passed, a promise is returned.
 
 A `levelup` instance can be in one of the following states:
 
--   _"new"_     - newly created, not opened or closed
--   _"opening"_ - waiting for the underlying store to be opened
--   _"open"_    - successfully opened the store, available for use
--   _"closing"_ - waiting for the store to be closed
--   _"closed"_  - store has been successfully closed, should not be used
+- _"new"_     - newly created, not opened or closed
+- _"opening"_ - waiting for the underlying store to be opened
+- _"open"_    - successfully opened the store, available for use
+- _"closing"_ - waiting for the store to be closed
+- _"closed"_  - store has been successfully closed, should not be used
 
 `isOpen()` will return `true` only when the state is "open".
 
@@ -313,23 +314,23 @@ db.createReadStream()
 
 You can supply an options object as the first parameter to `createReadStream()` with the following properties:
 
--   `gt` (greater than), `gte` (greater than or equal) define the lower bound of the range to be streamed. Only entries where the key is greater than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
+- `gt` (greater than), `gte` (greater than or equal) define the lower bound of the range to be streamed. Only entries where the key is greater than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
 
--   `lt` (less than), `lte` (less than or equal) define the higher bound of the range to be streamed. Only entries where the key is less than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
+- `lt` (less than), `lte` (less than or equal) define the higher bound of the range to be streamed. Only entries where the key is less than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
 
--   `reverse` _(boolean, default: `false`)_: stream entries in reverse order. Beware that due to the way that stores like LevelDB work, a reverse seek can be slower than a forward seek.
+- `reverse` _(boolean, default: `false`)_: stream entries in reverse order. Beware that due to the way that stores like LevelDB work, a reverse seek can be slower than a forward seek.
 
--   `limit` _(number, default: `-1`)_: limit the number of entries collected by this stream. This number represents a _maximum_ number of entries and may not be reached if you get to the end of the range first. A value of `-1` means there is no limit. When `reverse=true` the entries with the highest keys will be returned instead of the lowest keys.
+- `limit` _(number, default: `-1`)_: limit the number of entries collected by this stream. This number represents a _maximum_ number of entries and may not be reached if you get to the end of the range first. A value of `-1` means there is no limit. When `reverse=true` the entries with the highest keys will be returned instead of the lowest keys.
 
--   `keys` _(boolean, default: `true`)_: whether the results should contain keys. If set to `true` and `values` set to `false` then results will simply be keys, rather than objects with a `key` property. Used internally by the `createKeyStream()` method.
+- `keys` _(boolean, default: `true`)_: whether the results should contain keys. If set to `true` and `values` set to `false` then results will simply be keys, rather than objects with a `key` property. Used internally by the `createKeyStream()` method.
 
--   `values` _(boolean, default: `true`)_: whether the results should contain values. If set to `true` and `keys` set to `false` then results will simply be values, rather than objects with a `value` property. Used internally by the `createValueStream()` method.
+- `values` _(boolean, default: `true`)_: whether the results should contain values. If set to `true` and `keys` set to `false` then results will simply be values, rather than objects with a `value` property. Used internally by the `createValueStream()` method.
 
 Legacy options:
 
--   `start`: instead use `gte`
+- `start`: instead use `gte`
 
--   `end`: instead use `lte`
+- `end`: instead use `lte`
 
 <a name="createKeyStream"></a>
 
@@ -379,11 +380,11 @@ db.createReadStream({ keys: false, values: true })
 
 Each function taking a callback also can be used as a promise, if the callback is omitted. This applies for:
 
--   `db.get(key[, options])`
--   `db.put(key, value[, options])`
--   `db.del(key[, options])`
--   `db.batch(ops[, options])`
--   `db.batch().write()`
+- `db.get(key[, options])`
+- `db.put(key, value[, options])`
+- `db.del(key[, options])`
+- `db.batch(ops[, options])`
+- `db.batch().write()`
 
 The only exception is the `level-browserify` constructor itself, which if no callback is passed will lazily open the underlying store in the background.
 
