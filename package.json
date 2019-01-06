@@ -29,10 +29,7 @@
     "tape": "^4.9.0"
   },
   "hallmark": {
-    "community": "level-community",
-    "ignore": [
-      "README.md"
-    ]
+    "community": "level-community"
   },
   "repository": {
     "type": "git",
