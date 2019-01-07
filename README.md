@@ -2,19 +2,20 @@
 
 > Fast & simple storage. A Node.js-style `LevelDB` wrapper that works in the browser too!
 
-[![level badge][level-badge]](https://github.com/level/awesome)
-[![npm](https://img.shields.io/npm/v/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
-[![Build Status](https://secure.travis-ci.org/Level/level-browserify.png)](http://travis-ci.org/Level/level-browserify)
-[![dependencies](https://david-dm.org/Level/level-browserify.svg)](https://david-dm.org/level/level-browserify)
+[![level badge][level-badge]](https://github.com/Level/awesome)
+[![npm](https://img.shields.io/npm/v/level-browserify.svg?label=&logo=npm)](https://www.npmjs.com/package/level-browserify)
+[![Travis](https://img.shields.io/travis/Level/level-browserify.svg?logo=travis&label=)](https://travis-ci.org/Level/level-browserify)
 [![Coverage Status](https://coveralls.io/repos/github/Level/level-browserify/badge.svg)](https://coveralls.io/github/Level/level-browserify)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![npm](https://img.shields.io/npm/dm/level-browserify.svg)](https://www.npmjs.com/package/level-browserify)
+[![npm](https://img.shields.io/npm/dm/level-browserify.svg?label=dl)](https://www.npmjs.com/package/level-browserify)
+[![Backers on Open Collective](https://opencollective.com/level/backers/badge.svg?color=orange)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/level/sponsors/badge.svg?color=orange)](#sponsors)
 
 A convenience package that:
 
--   exports a function that returns a [`levelup instance`](https://github.com/level/levelup#ctor) when invoked
--   bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
--   leverages encodings using [`encoding-down`][encoding-down]
+- exports a function that returns a [`levelup instance`](https://github.com/Level/levelup#ctor) when invoked
+- bundles the current release of [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js]
+- leverages encodings using [`encoding-down`][encoding-down]
 
 Use this package to avoid having to explicitly install `leveldown`/`level-js` when you just want to use `levelup` in node and in the browser.
 
@@ -26,12 +27,13 @@ In node.js you get `leveldown`, while in the browser you get `level-js` (through
 
 <details><summary>Click to expand</summary>
 
--   [Usage](#usage)
--   [API](#api)
--   [Promise Support](#promise-support)
--   [Events](#events)
--   [Contributing](#contributing)
--   [License](#license)
+- [Usage](#usage)
+- [API](#api)
+- [Promise Support](#promise-support)
+- [Events](#events)
+- [Contributing](#contributing)
+- [Donate](#donate)
+- [License](#license)
 
 </details>
 
@@ -60,19 +62,19 @@ db.put('name', 'Level', function (err) {
 
 ## API
 
--   [<code><b>level()</b></code>](#ctor)
--   [<code>db.<b>open()</b></code>](#open)
--   [<code>db.<b>close()</b></code>](#close)
--   [<code>db.<b>put()</b></code>](#put)
--   [<code>db.<b>get()</b></code>](#get)
--   [<code>db.<b>del()</b></code>](#del)
--   [<code>db.<b>batch()</b></code> _(array form)_](#batch)
--   [<code>db.<b>batch()</b></code> _(chained form)_](#batch_chained)
--   [<code>db.<b>isOpen()</b></code>](#isOpen)
--   [<code>db.<b>isClosed()</b></code>](#isClosed)
--   [<code>db.<b>createReadStream()</b></code>](#createReadStream)
--   [<code>db.<b>createKeyStream()</b></code>](#createKeyStream)
--   [<code>db.<b>createValueStream()</b></code>](#createValueStream)
+- <a href="#ctor"><code><b>level()</b></code></a>
+- <a href="#open"><code>db.<b>open()</b></code></a>
+- <a href="#close"><code>db.<b>close()</b></code></a>
+- <a href="#put"><code>db.<b>put()</b></code></a>
+- <a href="#get"><code>db.<b>get()</b></code></a>
+- <a href="#del"><code>db.<b>del()</b></code></a>
+- <a href="#batch"><code>db.<b>batch()</b></code></a> _(array form)_
+- <a href="#batch_chained"><code>db.<b>batch()</b></code></a> _(chained form)_
+- <a href="#isOpen"><code>db.<b>isOpen()</b></code></a>
+- <a href="#isClosed"><code>db.<b>isClosed()</b></code></a>
+- <a href="#createReadStream"><code>db.<b>createReadStream()</b></code></a>
+- <a href="#createKeyStream"><code>db.<b>createKeyStream()</b></code></a>
+- <a href="#createValueStream"><code>db.<b>createValueStream()</b></code></a>
 
 See [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js] for more details.
 
@@ -82,9 +84,9 @@ See [`levelup`][levelup] and [`leveldown`][leveldown]/[`level-js`][level-js] for
 
 The main entry point for creating a new `levelup` instance.
 
--   `location` path to the underlying `LevelDB`.
--   `options` is passed on to the underlying store.
--   `options.keyEncoding` and `options.valueEncoding` are passed to [`encoding-down`][encoding-down], default encoding is `'utf8'`
+- `location` path to the underlying `LevelDB`.
+- `options` is passed on to the underlying store.
+- `options.keyEncoding` and `options.valueEncoding` are passed to [`encoding-down`][encoding-down], default encoding is `'utf8'`
 
 Calling `level('./db')` will also open the underlying store. This is an asynchronous operation which will trigger your callback if you provide one. The callback should take the form `function (err, db) {}` where `db` is the `levelup` instance. If you don't provide a callback, any read & write operations are simply queued internally until the store is fully opened.
 
@@ -240,27 +242,27 @@ db.batch()
   .write(function () { console.log('Done!') })
 ```
 
-<b><code>batch.put(key, value)</code></b>
+**`batch.put(key, value)`**
 
 Queue a _put_ operation on the current batch, not committed until a `write()` is called on the batch.
 
 This method may `throw` a `WriteError` if there is a problem with your put (such as the `value` being `null` or `undefined`).
 
-<b><code>batch.del(key)</code></b>
+**`batch.del(key)`**
 
 Queue a _del_ operation on the current batch, not committed until a `write()` is called on the batch.
 
 This method may `throw` a `WriteError` if there is a problem with your delete.
 
-<b><code>batch.clear()</code></b>
+**`batch.clear()`**
 
 Clear all queued operations on the current batch, any previous operations will be discarded.
 
-<b><code>batch.length</code></b>
+**`batch.length`**
 
 The number of queued operations on the current batch.
 
-<b><code>batch.write([callback])</code></b>
+**`batch.write([callback])`**
 
 Commit the queued operations for this batch. All operations not _cleared_ will be written to the underlying store atomically, that is, they will either all succeed or fail with no partial commits.
 
@@ -272,11 +274,11 @@ If no callback is passed, a promise is returned.
 
 A `levelup` instance can be in one of the following states:
 
--   _"new"_     - newly created, not opened or closed
--   _"opening"_ - waiting for the underlying store to be opened
--   _"open"_    - successfully opened the store, available for use
--   _"closing"_ - waiting for the store to be closed
--   _"closed"_  - store has been successfully closed, should not be used
+- _"new"_     - newly created, not opened or closed
+- _"opening"_ - waiting for the underlying store to be opened
+- _"open"_    - successfully opened the store, available for use
+- _"closing"_ - waiting for the store to be closed
+- _"closed"_  - store has been successfully closed, should not be used
 
 `isOpen()` will return `true` only when the state is "open".
 
@@ -312,29 +314,29 @@ db.createReadStream()
 
 You can supply an options object as the first parameter to `createReadStream()` with the following properties:
 
--   `gt` (greater than), `gte` (greater than or equal) define the lower bound of the range to be streamed. Only entries where the key is greater than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
+- `gt` (greater than), `gte` (greater than or equal) define the lower bound of the range to be streamed. Only entries where the key is greater than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
 
--   `lt` (less than), `lte` (less than or equal) define the higher bound of the range to be streamed. Only entries where the key is less than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
+- `lt` (less than), `lte` (less than or equal) define the higher bound of the range to be streamed. Only entries where the key is less than (or equal to) this option will be included in the range. When `reverse=true` the order will be reversed, but the entries streamed will be the same.
 
--   `reverse` _(boolean, default: `false`)_: stream entries in reverse order. Beware that due to the way that stores like LevelDB work, a reverse seek can be slower than a forward seek.
+- `reverse` _(boolean, default: `false`)_: stream entries in reverse order. Beware that due to the way that stores like LevelDB work, a reverse seek can be slower than a forward seek.
 
--   `limit` _(number, default: `-1`)_: limit the number of entries collected by this stream. This number represents a _maximum_ number of entries and may not be reached if you get to the end of the range first. A value of `-1` means there is no limit. When `reverse=true` the entries with the highest keys will be returned instead of the lowest keys.
+- `limit` _(number, default: `-1`)_: limit the number of entries collected by this stream. This number represents a _maximum_ number of entries and may not be reached if you get to the end of the range first. A value of `-1` means there is no limit. When `reverse=true` the entries with the highest keys will be returned instead of the lowest keys.
 
--   `keys` _(boolean, default: `true`)_: whether the results should contain keys. If set to `true` and `values` set to `false` then results will simply be keys, rather than objects with a `key` property. Used internally by the `createKeyStream()` method.
+- `keys` _(boolean, default: `true`)_: whether the results should contain keys. If set to `true` and `values` set to `false` then results will simply be keys, rather than objects with a `key` property. Used internally by the `createKeyStream()` method.
 
--   `values` _(boolean, default: `true`)_: whether the results should contain values. If set to `true` and `keys` set to `false` then results will simply be values, rather than objects with a `value` property. Used internally by the `createValueStream()` method.
+- `values` _(boolean, default: `true`)_: whether the results should contain values. If set to `true` and `keys` set to `false` then results will simply be values, rather than objects with a `value` property. Used internally by the `createValueStream()` method.
 
 Legacy options:
 
--   `start`: instead use `gte`
+- `start`: instead use `gte`
 
--   `end`: instead use `lte`
+- `end`: instead use `lte`
 
 <a name="createKeyStream"></a>
 
 ### `db.createKeyStream([options])`
 
-Returns a [Readable Stream](https://nodejs.org/docs/latest/api/stream.html#stream_readable_streams) of keys rather than key-value pairs. Use the same options as described for [`createReadStream`](#createReadStream) to control the range and direction.
+Returns a [Readable Stream](https://nodejs.org/docs/latest/api/stream.html#stream_readable_streams) of keys rather than key-value pairs. Use the same options as described for <a href="#createReadStream"><code>createReadStream</code></a> to control the range and direction.
 
 You can also obtain this stream by passing an options object to `createReadStream()` with `keys` set to `true` and `values` set to `false`. The result is equivalent; both streams operate in [object mode](https://nodejs.org/docs/latest/api/stream.html#stream_object_mode).
 
@@ -355,7 +357,7 @@ db.createReadStream({ keys: true, values: false })
 
 ### `db.createValueStream([options])`
 
-Returns a [Readable Stream](https://nodejs.org/docs/latest/api/stream.html#stream_readable_streams) of values rather than key-value pairs. Use the same options as described for [`createReadStream`](#createReadStream) to control the range and direction.
+Returns a [Readable Stream](https://nodejs.org/docs/latest/api/stream.html#stream_readable_streams) of values rather than key-value pairs. Use the same options as described for <a href="#createReadStream"><code>createReadStream</code></a> to control the range and direction.
 
 You can also obtain this stream by passing an options object to `createReadStream()` with `values` set to `true` and `keys` set to `false`. The result is equivalent; both streams operate in [object mode](https://nodejs.org/docs/latest/api/stream.html#stream_object_mode).
 
@@ -378,11 +380,11 @@ db.createReadStream({ keys: false, values: true })
 
 Each function taking a callback also can be used as a promise, if the callback is omitted. This applies for:
 
--   `db.get(key[, options])`
--   `db.put(key, value[, options])`
--   `db.del(key[, options])`
--   `db.batch(ops[, options])`
--   `db.batch().write()`
+- `db.get(key[, options])`
+- `db.put(key, value[, options])`
+- `db.del(key[, options])`
+- `db.batch(ops[, options])`
+- `db.batch().write()`
 
 The only exception is the `level-browserify` constructor itself, which if no callback is passed will lazily open the underlying store in the background.
 
@@ -439,16 +441,28 @@ db.on('put', function (key, value) {
 
 See the [Contribution Guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
 
+## Donate
+
+To sustain [`Level`](https://github.com/Level) and its activities, become a backer or sponsor on [Open Collective](https://opencollective.com/level). Your logo or avatar will be displayed on our 28+ [GitHub repositories](https://github.com/Level), [npm](https://www.npmjs.com/) packages and (soon) [our website](http://leveldb.org). 💖
+
+### Backers
+
+[![Open Collective backers](https://opencollective.com/level/backers.svg?width=890)](https://opencollective.com/level)
+
+### Sponsors
+
+[![Open Collective sponsors](https://opencollective.com/level/sponsors.svg?width=890)](https://opencollective.com/level)
+
 ## License
 
 [MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
 
-[levelup]: https://github.com/level/levelup
+[levelup]: https://github.com/Level/levelup
 
-[leveldown]: https://github.com/level/leveldown
+[leveldown]: https://github.com/Level/leveldown
 
-[encoding-down]: https://github.com/level/encoding-down
+[encoding-down]: https://github.com/Level/encoding-down
 
-[level-js]: https://github.com/level/level-js
+[level-js]: https://github.com/Level/level-js
