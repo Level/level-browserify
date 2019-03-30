@@ -1,5 +1,9 @@
 # level-browserify
 
+**No longer maintained: superseded by [`level v5.0.0`](https://github.com/Level/level).**
+
+---
+
 > Fast & simple storage. A Node.js-style `LevelDB` wrapper that works in the browser too!
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
